@@ -26,7 +26,6 @@ module WeiboApi
     end
 
     def make_request(url, options, method = :get)
-      p url
       response = HTTParty.send(method, url, options)
       return parse_success response if response.success?
       parse_failed response
