@@ -28,6 +28,31 @@ WeiboApi.config do |config|
 end
 ```
 
+All methods return a hash
+
+```ruby
+    # the access_token and the uid can be find with the omniauth gem https://github.com/beenhero/omniauth-weibo-oauth2
+    weibo_user = WeiboApi::User.new(access_token, uid)
+    
+    # get the user info
+    weibo_user.info
+    
+    # get the lastest weibos of the user
+    weibo_user.timeline
+
+    # or just find one specific
+    weibo_user.show_status(weibo_id)
+    
+    # do a custom search
+    weibo_user.custom_request('/comments/to_me')
+```
+
+Methods can take parameters (available on the [official documentation](http://open.weibo.com/wiki/API))
+
+```ruby
+    weibo_user.timeline(page: pages_count, since_id: starting_id)
+```
+
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/ocarta-l/weibo_api.
