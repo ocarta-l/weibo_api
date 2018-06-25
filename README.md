@@ -22,7 +22,7 @@ Or install it yourself as:
 
 **config/initializers/weibo_api.rb**
 ```ruby
-WeiboApi.config do |config|
+WeiboApi.configure do |config|
   config.client_id = ENV['weibo_client_id']
   config.client_secret = ENV['weibo_client_secret']
 end
