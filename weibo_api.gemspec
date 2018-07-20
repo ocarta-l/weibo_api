@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = 'A Ruby wrapper for the Weibo API v2.'
   spec.description   = 'A Ruby wrapper for the Weibo API v2.'
-  spec.homepage      = 'http://rubygems.org/gems/weibo_api'
+  spec.homepage      = 'https://github.com/ocarta-l/weibo_api'
   spec.license       = 'MIT'
 
   spec.files = `git ls-files -z`.split("\x0").reject do |f|
